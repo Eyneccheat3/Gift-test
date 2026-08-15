@@ -44,5 +44,20 @@
     <p>Вам доступен тестовый подарок.</p>
     <button>Получить подарок</button>
   </div>
-</body>
+<body>
+  ...
+  <button onclick="getGift()">Получить подарок</button>
+
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+
+  <script>
+    function getGift() {
+      if (window.Telegram && window.Telegram.WebApp) {
+        Telegram.WebApp.showAlert("Тест работает! Кнопка получила команду.");
+      } else {
+        alert("Кнопка работает!");
+      }
+    }
+  </script>
+</body></body>
 </html>
